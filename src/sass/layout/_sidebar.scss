@@ -5,6 +5,13 @@
 
   display: flex;
   justify-content: center;
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: end;
+    align-items: center;
+  }
 }
 
 .nav-btn {
@@ -30,5 +37,17 @@
   }
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  @include respond(tab-port) {
+    margin-top: 0;
+    margin-right: 3rem;
+
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }
