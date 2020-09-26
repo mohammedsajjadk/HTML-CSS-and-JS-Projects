@@ -1,0 +1,52 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #655a56;
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2 * 4vw);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 4vw auto;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+  display: grid;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-columns: 1.1fr 2fr 1.1fr;
+  grid-template-areas: "head head head";
+}
+
+.header {
+  grid-area: head;
+  // grid-column: 1/-1; // This also works.
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f5f3;
+  &__logo {
+    height: 4.5rem;
+    margin-left: 4rem;
+  }
+}
+
+.search {
+  padding-left: 3rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  &__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.7rem;
+    width: 30rem;
+  }
+}
