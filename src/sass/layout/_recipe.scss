@@ -106,4 +106,60 @@
       fill: #fff;
     }
   }
+
+  /* Recipe Ingredients */
+  &__ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    background-color: #f2efee;
+  }
+  &__ingredient-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    list-style: none;
+    margin-bottom: 3rem;
+  }
+  &__item {
+    display: flex;
+  }
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: #f59a83;
+    border: 1px solid #f59a83;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 1rem;
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
+  }
+  &__count {
+    margin-right: 0.5rem;
+    flex: 0 0 auto;
+  }
+
+  /* Recipe Directions */
+  &__directions {
+    padding: 4rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 90%;
+      margin-bottom: 3rem;
+      color: #968b87;
+    }
+  }
+  &__by {
+    font-weight: 700;
+  }
 }
