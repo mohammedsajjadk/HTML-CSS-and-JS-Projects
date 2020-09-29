@@ -1,0 +1,1 @@
+1) HtmlWebpackPlugin - That is, automatically adding index.html directly into public folder rather than using the index.html from there.
