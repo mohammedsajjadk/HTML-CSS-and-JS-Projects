@@ -1,1 +1,2 @@
-1) HtmlWebpackPlugin - That is, automatically adding index.html directly into public folder rather than using the index.html from there.
+1) In BoilerPlate Project, change the public folder to dist and add HtmlwebPackplugin stuff or better copy most of the stuff from webpack and package.json from this project.
+Also, use babelrc
