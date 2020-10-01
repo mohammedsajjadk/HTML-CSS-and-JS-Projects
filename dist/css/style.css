@@ -306,6 +306,15 @@ html {
 .results__btn--next {
   float: right; }
 
+.loader {
+  margin: 5rem auto;
+  text-align: center; }
+  .loader svg {
+    fill: #f58a83;
+    height: 5.5rem;
+    width: 5.5rem;
+    animation: rotate infinite 1s linear; }
+
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
