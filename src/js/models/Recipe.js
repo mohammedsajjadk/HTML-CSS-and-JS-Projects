@@ -15,7 +15,6 @@ export default class Recipe {
       this.img = res.data.recipe.image_url;
       this.url = res.data.recipe.source_url;
       this.ingredients = res.data.recipe.ingredients;
-      console.log(this.ingredients);
     } catch (error) {
       console.log(error);
       alert("Something went wrong :(");
@@ -115,7 +114,7 @@ export default class Recipe {
 
     // Ingredients
     this.ingredients.forEach((ing) => {
-      ing.count *= newServings / this.servings; 
+      ing.count *= newServings / this.servings;
     });
 
     this.servings = newServings;
