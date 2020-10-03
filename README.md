@@ -21,3 +21,6 @@
 # Functionalities
 
 Watch this [Video](https://www.youtube.com/watch?v=XWPNx2iwd4U)
+
+# Queries
+Drop an email to mohammedsajjadk@gmail.com
