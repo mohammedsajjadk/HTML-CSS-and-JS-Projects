@@ -553,6 +553,13 @@ body {
   .shopping__item:hover .shopping__delete {
     opacity: 1;
     visibility: visible; }
+  .shopping .btn-clear {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+    opacity: 1;
+    visibility: visible; }
 
 .copyright {
   color: #968b87;

@@ -15,7 +15,23 @@ export const renderItem = (item) => {
             </button>
         </li>
     `;
-  elements.shopping.insertAdjacentHTML("beforeend", markup);
+  elements.shoppingList.insertAdjacentHTML("beforeend", markup);
+};
+
+export const renderClearListBtn = () => {
+  const markup = `
+        <button class="btn-small btn-clear">
+          <span>Clear Shopping List</span
+          ><svg>
+            <use href="img/icons.svg#icon-circle-with-cross"></use>
+          </svg>
+        </button>
+  `;
+  if (document.querySelectorAll(".shopping__item").length > 0) {
+    document
+      .querySelector(".shopping__list")
+      .insertAdjacentHTML("afterend", markup);
+  }
 };
 
 export const deleteItem = (id) => {
