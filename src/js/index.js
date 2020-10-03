@@ -139,10 +139,9 @@ elements.shoppingList.addEventListener("click", (e) => {
 // Delete all shopping list items
 elements.shopping.addEventListener("click", (e) => {
   if (e.target.matches(".btn-clear, .btn-clear *")) {
-    console.log("hi");
-    /*     elements.shoppingList.innerHTML = "";
+    elements.shoppingList.innerHTML = "";
     const btnClear = document.querySelector(".btn-clear");
-    btnClear.parentElement.removeChild(btnClear); */
+    btnClear.parentElement.removeChild(btnClear);
   }
 });
 
