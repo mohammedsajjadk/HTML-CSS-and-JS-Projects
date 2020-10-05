@@ -1,33 +1,64 @@
 # Cloning & Creating Your Own Project
 
-1. Go to any folder --> Open Command Prompt --> Clone the project from github. Use 
+## METHOD 1
+ If you want to create a new branch inside https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git and continue then follow below steps:
+1. Go to https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects
+2. Click the 'master' dropdown
+3. Select 'Boilerplate-For-HTML-CSS-JS' from the dropdown
+4. Click the dropdown again
+5. In the text box, enter your new branch name
+6. You will see the following: **Create branch: YourBranchName from 'Boilerplate-For-HTML-CSS-JS'**. Click it and your branch is created.
+7. Now go to any folder in your PC --> Open Command Prompt --> Clone the project from github. Use 
    ```
-   git clone https://github.com/mohammedsajjadk/Boilerplate-For-HTML-CSS-JS.git
+   git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
    ```
-2. Rename the folder, then go inside that folder and delete .git folder
-3. Create a new repository or a new branch inside any repository
-4. Run the below git commands
+8. Rename the folder (later, if required), then go inside that folder and open CMD again
+9. Enter the below command:
+   ```
+   git checkout <Your New Branch Name>
+      Example: git checkout YourBranchName
+   ```
+   
+## METHOD 2
+If you want to create a new repository and then work on it, then go to https://github.com/mohammedsajjadk and follow below the below steps
+1. Click "+" button --> New Repository --> Enter repository name --> click "Create Repository"
+2. Now go to any folder in your PC --> Open Command Prompt --> Clone the project from github. Use 
+   ```
+   git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git 
+      (YES, You need to clone this repo only!)
+   ```
+3. Rename the folder (later, if required), then go inside that folder and open CMD again
+4. Enter the below command:
+   ```
+   git checkout Boilerplate-For-HTML-CSS-JS
+      (YES, You need to clone this branch only!)
+   ```
+5. Delete .git folder
+6. Open CMD again
+   ```
+   git init
+   git remote add origin <Your New Repo .git link> 
+   ```
+7. Run the below git commands
     ```
-   a) git init
-   b) git remote add origin git remote add origin <Your Repo link>
-         Example: git remote add origin https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
-   c) To switch the branch, use below command:
+   a) (Optional) To switch the branch, use below command:
          git switch -c <Branch name> 
             Example: git switch -c Todo-App
-   d) git add .
-   e) git commit -m "Initial commit"
-   f) git push -f origin <Branch Name>
-         Example: git push -f origin Todo-App
+   b) git add .
+   c) git commit -m "Initial commit"
+   d) git push -f origin <Branch Name>
+         Example: git push -f origin master
     ```
-5. Run the below command to download a package and it's dependencies 
+# NPM Commands
+1.  Run the below command to download a package and it's dependencies 
    ```
    npm install
    ``` 
-6. Open command prompt (in the project root directory) and enter the below command & hit ENTER 
+2. Open command prompt (in the project root directory) and enter the below command & hit ENTER 
    ```
    npm run start
    ```
-   You will get a message in the terminal like 'Project is running at http://localhost:8080/', go to that address in your browser
+You will get a message in the terminal like 'Project is running at http://localhost:8080/', go to that address in your browser
 
 # Project Structure Explanation
 * **dist** folder - This is the folder you will release to the production. More explanation to follow.
