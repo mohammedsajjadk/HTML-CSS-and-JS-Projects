@@ -1,0 +1,18 @@
+.actions {
+  background-color: #353239;
+  /* border-bottom: 1px solid #dedfe0; */
+  /* color: #333333; */
+  padding: 1rem;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1.6rem;
+    &--spaced {
+      justify-content: space-between;
+    }
+  }
+}

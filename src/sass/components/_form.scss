@@ -1,0 +1,53 @@
+.input {
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+  height: 3rem;
+  margin-right: 1.6rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: baseline;
+}
+
+.checkbox > input {
+  margin-right: 0.4rem;
+}
+
+.button {
+  background: #7044a0;
+  border: none;
+  border-bottom: 2px solid #603a88;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.8rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background: #5f3a87;
+}
+
+.button--secondary {
+  background: #888888;
+  border-bottom: 2px solid #717171;
+}
+
+.button--secondary:hover {
+  background: #6e6e6e;
+}
+
+.button--text {
+  background: none;
+  border: none;
+  color: #aaa;
+}
+
+.button--text:hover {
+  background: none;
+  color: white;
+  text-decoration: underline;
+}

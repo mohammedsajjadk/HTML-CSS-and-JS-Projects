@@ -1,0 +1,16 @@
+.header {
+  background: #6f439c;
+  color: white;
+  padding: 1.6rem 0;
+
+  &__title {
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__subtitle {
+    /* color: #777; */
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+}

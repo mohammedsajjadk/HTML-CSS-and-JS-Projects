@@ -24,3 +24,19 @@ html {
     font-size: 75%; //1rem = 12, 12/16
   }
 }
+
+body {
+  background: #2b292e;
+  color: #fafafa;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+a {
+  color: #6f439c;
+}
