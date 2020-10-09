@@ -149,7 +149,8 @@ body {
         font-size: 2rem; }
     .container .income__item:hover button,
     .container .expense__item:hover button {
-      display: block; }
+      display: block;
+      cursor: pointer; }
 
 .item__value {
   color: #28b9b5;
