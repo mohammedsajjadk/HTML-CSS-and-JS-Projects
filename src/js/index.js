@@ -1,7 +1,6 @@
-import { renderTodos } from "./views";
-import { setFilters } from "./filters";
-import { createTodo, loadTodos } from "./todos";
-debugger;
+import { renderTodos } from "./views/views";
+import { setFilters } from "./models/filters";
+import { createTodo, loadTodos } from "./models/todos";
 renderTodos();
 
 document.querySelector("#search-text").addEventListener("input", (e) => {
