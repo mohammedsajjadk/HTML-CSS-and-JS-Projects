@@ -1,0 +1,52 @@
+.add {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+    height: 4rem;
+    border: 1px solid #e7e7e7;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+  &__description {
+    border-radius: 0.75rem;
+    width: 25%;
+    font-family: inherit;
+  }
+
+  &__value {
+    border: none;
+    border-radius: 0.75rem;
+    width: 5%;
+    font-family: inherit;
+  }
+
+  &__type:focus,
+  &__description:focus,
+  &__value:focus {
+    outline: none;
+    border: 1px solid #28b9b5;
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    i {
+      color: #28b9b5;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.red-focus:focus {
+  border: 1px solid #ff5049 !important;
+}
+
+.red {
+  color: #ff5049 !important;
+}

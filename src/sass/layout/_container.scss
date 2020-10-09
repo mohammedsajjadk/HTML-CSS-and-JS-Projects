@@ -1,0 +1,56 @@
+.container {
+  max-width: 100rem;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5rem;
+  .income,
+  .expense {
+    &__title {
+      color: #28b9b5;
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #8080804a;
+    }
+
+    &__item {
+      display: flex;
+      border-bottom: 1px solid #8080804a;
+      padding: 1.5rem 1rem;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover .item__value {
+        transform: translateX(-2rem);
+      }
+      &:nth-child(2n) {
+        background-color: #f7f7f7;
+      }
+      &--description {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      &--delete {
+        border: none;
+        background: none;
+        display: none;
+
+        i {
+          color: #28b9b5;
+          font-size: 2rem;
+        }
+      }
+
+      &:hover button {
+        display: block;
+      }
+    }
+  }
+}
+
+.item__value {
+  color: #28b9b5;
+  transition: all 0.2s;
+}

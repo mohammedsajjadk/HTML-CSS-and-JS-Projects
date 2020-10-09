@@ -6,14 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
       rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" /> -->
-    <title>Boilerplate Project</title>
+    <title>Budgety Sajjad</title>
   </head>
   <body>
-    <div class="container"></div>
+    <header class="budget">
+      <div class="budget__title">
+        Available Budget in
+        <span class="budget__title--month">October 2020:</span>
+      </div>
+      <div class="budget__value">+&nbsp;4.00</div>
+      <div class="budget__income">
+        <div class="budget__income--text">INCOME</div>
+        <div class="right">
+          <div class="budget__income--amount">+&nbsp;4.00</div>
+          <div class="budget__income--percentage">&nbsp;</div>
+        </div>
+      </div>
+      <div class="budget__expense">
+        <div class="budget__expense--text">EXPENSE</div>
+        <div class="right">
+          <div class="budget__expense--amount">-&nbsp;1.00</div>
+          <div class="budget__expense--percentage">20%</div>
+        </div>
+      </div>
+      <h1></h1>
+    </header>
+    <form class="add">
+      <select class="add__type">
+        <option value="inc" selected>+</option>
+        <option value="dec">-</option>
+      </select>
+      <input
+        type="text"
+        class="add__description"
+        placeholder="Add description"
+      />
+      <input type="number" class="add__value" placeholder="Value" />
+      <button class="add__btn">
+        <i class="ion-ios-checkmark-outline"></i>
+      </button>
+    </form>
+
+    <div class="container">
+      <div class="income">
+        <h2 class="income__title">INCOME</h2>
+        <div class="income__list">
+          <div id="12345" class="income__item">
+            <p class="income__item--description">Hello</p>
+            <div class="right">
+              <div class="item__value">+ 1.00</div>
+              <button class="income__item--delete">
+                <i class="ion-ios-close-outline"></i>
+              </button>
+            </div>
+          </div>
+          <div id="12345" class="income__item">
+            <p class="income__item--description">Hello 2</p>
+            <div class="right">
+              <div class="item__value">+ 1.00</div>
+              <button class="income__item--delete">
+                <i class="ion-ios-close-outline"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="expense">
+        <h2 class="expense__title red">EXPENSES</h2>
+        <div class="expense__list">
+          <div id="12345" class="expense__item">
+            <p class="expense__item--description">Hello</p>
+            <div class="right">
+              <div class="item__value red">- 1.00</div>
+              <button class="expense__item--delete">
+                <i class="ion-ios-close-outline red"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
