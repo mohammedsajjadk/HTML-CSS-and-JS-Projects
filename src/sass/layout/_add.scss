@@ -21,8 +21,16 @@
   &__value {
     border: none;
     border-radius: 0.75rem;
-    width: 5%;
+    width: 6%;
     font-family: inherit;
+
+    @include respond(tab-port) {
+      width: 9%;
+    }
+
+    @include respond(phone) {
+      width: 10%;
+    }
   }
 
   &__type:focus,

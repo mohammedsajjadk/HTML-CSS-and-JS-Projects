@@ -64,6 +64,9 @@ html {
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: Open Sans;
@@ -89,8 +92,14 @@ body {
   .add__value {
     border: none;
     border-radius: 0.75rem;
-    width: 5%;
+    width: 6%;
     font-family: inherit; }
+    @media only screen and (max-width: 56.25em) {
+      .add__value {
+        width: 9%; } }
+    @media only screen and (max-width: 37.5em) {
+      .add__value {
+        width: 10%; } }
   .add__type:focus, .add__description:focus, .add__value:focus {
     outline: none;
     border: 1px solid #28b9b5; }
@@ -114,6 +123,14 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      margin-right: 4rem;
+      margin-left: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      margin-right: 1rem;
+      margin-left: 1rem; } }
   .container .income__title,
   .container .expense__title {
     color: #28b9b5;

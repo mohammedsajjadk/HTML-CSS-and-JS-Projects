@@ -4,6 +4,15 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 5rem;
+
+  @include respond(tab-port) {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+  @include respond(phone) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
   .income,
   .expense {
     &__title {
