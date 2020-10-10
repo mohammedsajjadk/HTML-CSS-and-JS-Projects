@@ -560,6 +560,10 @@ body {
     .container .income__item:hover .item__value,
     .container .expense__item:hover .item__value {
       transform: translateX(-2rem); }
+      @media only screen and (max-width: 75em) {
+        .container .income__item:hover .item__value,
+        .container .expense__item:hover .item__value {
+          transform: translateX(0); } }
     .container .income__item:nth-child(2n),
     .container .expense__item:nth-child(2n) {
       background-color: #f7f7f7; }
@@ -572,6 +576,10 @@ body {
       border: none;
       background: none;
       display: none; }
+      @media only screen and (max-width: 75em) {
+        .container .income__item--delete,
+        .container .expense__item--delete {
+          display: inline; } }
       .container .income__item--delete i,
       .container .expense__item--delete i {
         color: #28b9b5;
