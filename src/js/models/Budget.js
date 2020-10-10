@@ -62,4 +62,6 @@ const calculateBudget = (arr) =>
     return acc + parseFloat(curr.amount);
   }, 0);
 
-loadBudget();
+
+
+  loadBudget();

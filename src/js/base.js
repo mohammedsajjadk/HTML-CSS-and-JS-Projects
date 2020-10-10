@@ -10,6 +10,8 @@ export const elements = {
   budgetExpenseAmount: document.querySelector(".budget__expense--amount"),
 };
 
-/* export const elementStrings = {
-  loader: "loader",
-}; */
+export const elementStrings = {
+  addType: ".add__type",
+  addDescription: ".add__description",
+  addValue: ".add__value",
+};

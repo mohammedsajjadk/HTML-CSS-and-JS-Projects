@@ -9,7 +9,7 @@
 // Write the code for your controllers here!
 import * as Budget from "./models/Budget";
 import * as view from "./views/views";
-import { elements } from "./base";
+import { elements, elementStrings } from "./base";
 
 view.renderMonth();
 Budget.renderBudget();
@@ -39,4 +39,16 @@ document.addEventListener("click", (e) => {
     // update budget
     Budget.renderBudget(true);
   }
+});
+
+elements.addType.addEventListener("change", (e) => {
+  let fields = Array.from(
+    document.querySelectorAll(
+      `${elementStrings.addType}, ${elementStrings.addDescription}, ${elementStrings.addValue}`
+    )
+  );
+
+  fields.forEach((curr) => {
+    curr.classList.toggle("red-focus");
+  });
 });
