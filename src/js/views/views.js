@@ -1,6 +1,5 @@
-// import { elements } from "./base";
 import moment from "moment";
-import { elements, elementStrings } from "../base";
+import { elements } from "../base";
 
 export const generateBudget = (budget) => {
   let type = budget.type === "inc" ? "income" : "expense";
@@ -30,18 +29,21 @@ export const renderMonth = () => {
     getCurrentMonth() + ":";
 };
 
+/* Render Budget on Header */
 export const generateHeaderBudget = (totalIncomeAmount, totalExpenseAmount) => {
   const budget = parseFloat(totalIncomeAmount - totalExpenseAmount).toFixed(2);
 
+  // Header Budget
   elements.budgetValue.innerHTML = generateAmount(budget);
 
+  // Render Income and Expense Amount
   elements.budgetIncomeAmount.innerHTML = generateAmount(totalIncomeAmount);
   elements.budgetExpenseAmount.innerHTML = generateAmount(
     -Math.abs(totalExpenseAmount)
   );
 
+  // Render Percentage
   const percentage = totalIncomeAmount / totalExpenseAmount;
-
   if (percentage && totalExpenseAmount != 0) {
     elements.budgetExpensePercentage.innerHTML = `${Math.round(percentage)}%`;
   } else {

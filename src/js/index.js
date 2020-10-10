@@ -1,28 +1,26 @@
-// import Search from "./models/Search";
-// import * as searchView from "./views/searchView";
-// import { elements, renderLoader, clearLoader } from "./views/base";
-
-/** Global state of the app
- */
-// const state = {};
-
-// Write the code for your controllers here!
-import * as Budget from "./models/Budget";
+import * as Budget from "./models/Budget"; // loadBudget() will be executed in Budget.js while importing here
 import * as view from "./views/views";
 import { elements, elementStrings } from "./base";
 
+/* Render Current Month and Budget (in header) on UI */
 view.renderMonth();
 Budget.renderBudget();
 
+/* Add Item */
 elements.form.addEventListener("submit", (e) => {
   e.preventDefault();
   const type = elements.addType.value;
   const description = elements.addDescription.value;
   const value = elements.addValue.value;
   if (description && value) {
+    // Save budget on the array
     Budget.saveBudget(type, description, value);
+
+    // Clear the fields
     elements.addDescription.value = "";
     elements.addValue.value = "";
+
+    // Render on UI
     Budget.renderBudget();
   }
 });
@@ -41,6 +39,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
+/* Toggle class when dropdown state change */
 elements.addType.addEventListener("change", () => {
   let fields = Array.from(
     document.querySelectorAll(

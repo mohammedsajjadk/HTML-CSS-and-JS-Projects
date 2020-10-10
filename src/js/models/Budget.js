@@ -2,7 +2,6 @@ import uuidv4 from "uuid/v4";
 import * as view from "../views/views";
 
 let budgetObj = [];
-// const budgetObj = [{ id: "", type: "", description: "", amount }];
 
 export const loadBudget = () => {
   const item = localStorage.getItem("budget");
@@ -62,6 +61,4 @@ const calculateBudget = (arr) =>
     return acc + parseFloat(curr.amount);
   }, 0);
 
-
-
-  loadBudget();
+loadBudget();
