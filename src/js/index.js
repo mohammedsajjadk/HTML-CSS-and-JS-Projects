@@ -26,3 +26,17 @@ elements.form.addEventListener("submit", (e) => {
     Budget.renderBudget();
   }
 });
+
+/* Delete Item */
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".ion-ios-close-outline")) {
+    // remove from storage
+    Budget.deleteBudget(document.querySelector("div[id]").id);
+
+    // remove from UI
+    e.target.closest("div[id]").remove();
+
+    // update budget
+    Budget.renderBudget(true);
+  }
+});

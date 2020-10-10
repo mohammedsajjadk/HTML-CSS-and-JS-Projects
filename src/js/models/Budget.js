@@ -1,6 +1,5 @@
 import uuidv4 from "uuid/v4";
 import * as view from "../views/views";
-import { elements } from "../base";
 
 let budgetObj = [];
 // const budgetObj = [{ id: "", type: "", description: "", amount }];
@@ -26,31 +25,35 @@ export const saveBudget = (type, description, amount) => {
 };
 
 export const deleteBudget = (id) => {
-  let budgetArr = loadBudget();
-  const index = budgetArr.findIndex((curr) => curr.id === id);
-  budgetArr.splice(index, 1);
+  const index = budgetObj.findIndex((curr) => curr.id === id);
+  budgetObj.splice(index, 1);
+  localStorage.setItem("budget", JSON.stringify(budgetObj));
 };
 
-export const renderBudget = () => {
-  const filteredIncomeArr = budgetObj.filter((curr) =>
-    curr.type.includes("inc")
-  );
-  const filteredExpenseArr = budgetObj.filter((curr) =>
-    curr.type.includes("dec")
-  );
+export const renderBudget = (forDelete = false) => {
+  const filtered = filteredArray();
 
-  if (filteredIncomeArr.length > 0) {
-    document.querySelector(`.income__list`).innerHTML = "";
-    filteredIncomeArr.forEach(view.generateBudget);
-  }
+  if (!forDelete) {
+    if (filtered.incomeArr.length > 0) {
+      document.querySelector(`.income__list`).innerHTML = "";
+      filtered.incomeArr.forEach(view.generateBudget);
+    }
 
-  if (filteredExpenseArr.length > 0) {
-    document.querySelector(`.expense__list`).innerHTML = "";
-    filteredExpenseArr.forEach(view.generateBudget);
+    if (filtered.expenseArr.length > 0) {
+      document.querySelector(`.expense__list`).innerHTML = "";
+      filtered.expenseArr.forEach(view.generateBudget);
+    }
   }
-  let totalIncomeAmount = calculateBudget(filteredIncomeArr);
-  let totalExpenseAmount = calculateBudget(filteredExpenseArr);
+  let totalIncomeAmount = calculateBudget(filtered.incomeArr);
+  let totalExpenseAmount = calculateBudget(filtered.expenseArr);
   view.generateHeaderBudget(totalIncomeAmount, totalExpenseAmount);
+};
+
+const filteredArray = () => {
+  const incomeArr = budgetObj.filter((curr) => curr.type.includes("inc"));
+  const expenseArr = budgetObj.filter((curr) => curr.type.includes("dec"));
+
+  return { incomeArr, expenseArr };
 };
 
 const calculateBudget = (arr) =>
