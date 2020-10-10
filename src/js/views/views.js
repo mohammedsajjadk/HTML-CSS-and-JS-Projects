@@ -42,8 +42,11 @@ export const generateHeaderBudget = (totalIncomeAmount, totalExpenseAmount) => {
 
   const percentage = totalIncomeAmount / totalExpenseAmount;
 
-  if (percentage)
+  if (percentage && totalExpenseAmount != 0) {
     elements.budgetExpensePercentage.innerHTML = `${Math.round(percentage)}%`;
+  } else {
+    elements.budgetExpensePercentage.innerHTML = "---";
+  }
 };
 
 const generateAmount = (amount) =>
