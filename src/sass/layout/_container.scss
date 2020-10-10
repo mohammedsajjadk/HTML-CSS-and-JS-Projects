@@ -32,6 +32,10 @@
 
       &:hover .item__value {
         transform: translateX(-2rem);
+
+        @include respond(tab-land) {
+          transform: translateX(0);
+        }
       }
       &:nth-child(2n) {
         background-color: #f7f7f7;
@@ -45,6 +49,10 @@
         border: none;
         background: none;
         display: none;
+
+        @include respond(tab-land) {
+          display: inline;
+        }
 
         i {
           color: #28b9b5;
