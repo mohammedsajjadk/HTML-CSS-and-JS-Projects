@@ -8,6 +8,9 @@ export const elements = {
   budgetValue: document.querySelector(".budget__value"),
   budgetIncomeAmount: document.querySelector(".budget__income--amount"),
   budgetExpenseAmount: document.querySelector(".budget__expense--amount"),
+  budgetExpensePercentage: document.querySelector(
+    ".budget__expense--percentage"
+  ),
 };
 
 export const elementStrings = {

@@ -1,6 +1,6 @@
 // import { elements } from "./base";
 import moment from "moment";
-import { elements } from "../base";
+import { elements, elementStrings } from "../base";
 
 export const generateBudget = (budget) => {
   let type = budget.type === "inc" ? "income" : "expense";
@@ -34,10 +34,16 @@ export const generateHeaderBudget = (totalIncomeAmount, totalExpenseAmount) => {
   const budget = parseFloat(totalIncomeAmount - totalExpenseAmount).toFixed(2);
 
   elements.budgetValue.innerHTML = generateAmount(budget);
+
   elements.budgetIncomeAmount.innerHTML = generateAmount(totalIncomeAmount);
   elements.budgetExpenseAmount.innerHTML = generateAmount(
     -Math.abs(totalExpenseAmount)
   );
+
+  const percentage = totalIncomeAmount / totalExpenseAmount;
+
+  if (percentage)
+    elements.budgetExpensePercentage.innerHTML = `${Math.round(percentage)}%`;
 };
 
 const generateAmount = (amount) =>

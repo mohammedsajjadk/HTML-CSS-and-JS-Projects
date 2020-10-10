@@ -41,7 +41,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-elements.addType.addEventListener("change", (e) => {
+elements.addType.addEventListener("change", () => {
   let fields = Array.from(
     document.querySelectorAll(
       `${elementStrings.addType}, ${elementStrings.addDescription}, ${elementStrings.addValue}`
