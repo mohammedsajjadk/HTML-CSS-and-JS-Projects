@@ -50,8 +50,9 @@ export const renderBudget = (forDelete = false) => {
 };
 
 const filteredArray = () => {
-  const incomeArr = budgetObj.filter((curr) => curr.type.includes("inc"));
-  const expenseArr = budgetObj.filter((curr) => curr.type.includes("dec"));
+  const arr = loadBudget();
+  const incomeArr = arr.filter((curr) => curr.type.includes("inc"));
+  const expenseArr = arr.filter((curr) => curr.type.includes("dec"));
 
   return { incomeArr, expenseArr };
 };

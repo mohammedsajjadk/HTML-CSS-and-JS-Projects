@@ -10,7 +10,7 @@ export const generateBudget = (budget) => {
         <div class="right">
         <div class="item__value${type === "expense" ? " red" : ""}">${
     type === "income" ? "+" : "-"
-  } ${budget.amount}</div>
+  } ${Math.abs(budget.amount)}</div>
         <button class="${type}__item--delete">
             <i class="ion-ios-close-outline${
               type === "expense" ? " red" : ""
