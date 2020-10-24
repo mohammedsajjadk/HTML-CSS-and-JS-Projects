@@ -4,10 +4,12 @@
   "description": "Sajjad's Boilerplate project for HTML, CSS and JS projects",
   "main": "index.js",
   "scripts": {
+    "watch:sass-2": "node-sass src/sass/style.scss src/css/style.css -w",
     "watch:sass": "node-sass src/sass/style.scss dist/css/style.css -w",
     "dev-server": "webpack-dev-server --mode development --open",
     "start": "npm-run-all --parallel dev-server watch:sass",
     "build": "webpack --mode production",
+    "go": "npm-run-all --parallel watch:sass nodemon build dev-server",
     "production": "npm-run-all build compile:sass concat:css prefix:css compress:css",
     "compile:sass": "node-sass src/sass/style.scss dist/css/style.comp.css",
     "concat:css": "concat -o dist/css/style.concat.css dist/css/icon-font.css dist/css/style.comp.css",
@@ -34,6 +36,10 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.0",
+    "uuid": "^8.3.1"
   }
 }

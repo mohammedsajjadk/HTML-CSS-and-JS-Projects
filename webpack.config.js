@@ -2,7 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ["babel-polyfill", "./src/js/index.js"], // For Babel - Step 4: add "babel-polyfill".
+  entry: [
+    "webpack-dev-server/client?http://localhost:3000",
+    "babel-polyfill", "./src/js/index.js"], // For Babel - Step 4: add "babel-polyfill".
   // So, this is one huge bundle which will have polyfills for >=ES6 code and our js code as well
   output: {
     path: path.resolve(__dirname, "dist"),

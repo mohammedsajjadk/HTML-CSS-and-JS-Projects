@@ -1,19 +1,114 @@
 <!DOCTYPE html>
-
-<html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8" />
+    <title>Estimation Tool | Smart Foundry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" /> -->
-    <title>Boilerplate Project</title>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <h3>Estimation <span>Tool</span></h3>
+      <div class="progress-bar">
+        <div class="step">
+          <p>Custo</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Enviro</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Server</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Submit</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form action="/submit" method="post">
+          <div class="page slide-page">
+            <div class="title">Customer Info:</div>
+            <div class="field">
+              <div class="label">First Name</div>
+              <input type="text" name="firstName" />
+            </div>
+            <div class="field">
+              <div class="label">Last Name</div>
+              <input type="text" name="lastName" />
+            </div>
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+          </div>
+          <div class="page">
+            <div class="title">Environment Info:</div>
+            <div class="field">
+              <div class="label">Overall Number of Environments</div>
+              <input type="number" name="noOfEnv" />
+            </div>
+            <div class="field">
+              <div class="label">Total Users (Dev + QA)</div>
+              <input type="number" name="totalUsers" />
+            </div>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+          <div class="page">
+            <div class="title">Server Info:</div>
+            <div class="field">
+              <div class="label">Total number of Servers</div>
+              <input type="number" name="noOfServers" />
+            </div>
+            <div class="field">
+              <div class="label">Number of Physical Servers</div>
+              <input type="number" name="noOfPhysicalServers" />
+            </div>
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+          <div class="page">
+            <div class="title">Contact Details:</div>
+            <div class="field">
+              <div class="label">Username</div>
+              <input type="text" name="username" />
+            </div>
+            <div class="field">
+              <div class="label">Phone Number</div>
+              <input type="number" name="phoneNumber" />
+            </div>
+            <div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit" name="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
