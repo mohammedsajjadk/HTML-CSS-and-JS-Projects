@@ -7,7 +7,7 @@ git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
 2. Either go inside that folder or copy the contents inside that folder to the folder you want.
 3. Enter this command
 ```
-git checkout Multi-Step-Form
+git checkout SF
 ```
 4. Run the below command
 ```
