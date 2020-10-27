@@ -461,6 +461,56 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+.multisteps-form__panel[data-animation="scaleOut"] {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.multisteps-form__panel[data-animation="slideHorz"] {
+  left: 50px; }
+
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0; }
+
+.multisteps-form__panel[data-animation="slideVert"] {
+  top: 30px; }
+
+.multisteps-form__panel[data-animation="slideVert"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0; }
+
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s; }
+
+.multisteps-form__panel[data-animation="scaleIn"] {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9); }
+
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
 * {
   margin: 0;
   padding: 0;
@@ -693,6 +743,19 @@ textarea {
 .card-title {
   margin-bottom: 0.75rem; }
 
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px; }
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px; }
+
 .form-control {
   display: block;
   width: 100%;
@@ -706,14 +769,6 @@ textarea {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-
-.form-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px; }
 
 .multisteps-form__progress {
   display: grid;
@@ -797,23 +852,6 @@ textarea {
   height: auto;
   opacity: 1;
   visibility: visible; }
-
-.multisteps-form__panel[data-animation="scaleIn"] {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9); }
-
-.multisteps-form__panel[data-animation="scaleIn"].js-active {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  -webkit-transform: scale(1);
-  transform: scale(1); }
-
-.form-row > .col,
-.form-row > [class*="col-"] {
-  padding-right: 5px;
-  padding-left: 5px; }
 
 .header {
   max-width: 600px;

@@ -1,3 +1,18 @@
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -11,15 +26,6 @@
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
 }
 
 .multisteps-form__progress {
@@ -120,23 +126,4 @@
   height: auto;
   opacity: 1;
   visibility: visible;
-}
-
-.multisteps-form__panel[data-animation="scaleIn"] {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
-.multisteps-form__panel[data-animation="scaleIn"].js-active {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-.form-row > .col,
-.form-row > [class*="col-"] {
-  padding-right: 5px;
-  padding-left: 5px;
 }

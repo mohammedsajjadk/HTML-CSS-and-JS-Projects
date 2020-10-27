@@ -1,14 +1,3 @@
-// import Search from "./models/Search";
-// import * as searchView from "./views/searchView";
-// import { elements, renderLoader, clearLoader } from "./views/base";
-
-/** Global state of the app
- */
-// const state = {};
-
-
-// Write the code for your controllers here!
-
 //DOM elements
 const DOMstrings = {
   stepsBtnClass: 'multisteps-form__progress-btn',
@@ -24,7 +13,6 @@ const DOMstrings = {
 
 //remove class from a set of items
 const removeClasses = (elemSet, className) => {
-  debugger
   elemSet.forEach(elem => {
       elem.classList.remove(className);
   });
@@ -32,7 +20,6 @@ const removeClasses = (elemSet, className) => {
 
 //return exact parent node of the element
 const findParent = (elem, parentClass) => {
-  debugger
   let currentNode = elem;
   while (!currentNode.classList.contains(parentClass)) {
       currentNode = currentNode.parentNode;
@@ -42,13 +29,11 @@ const findParent = (elem, parentClass) => {
 
 //get active button step number
 const getActiveStep = elem => {
-  debugger
   return Array.from(DOMstrings.stepsBtns).indexOf(elem);
 };
 
 //set all steps before clicked (and clicked too) to active
 const setActiveStep = activeStepNum => {
-  debugger
   //remove active state from all the state
   removeClasses(DOMstrings.stepsBtns, 'js-active');
   //set picked items to active
@@ -61,7 +46,6 @@ const setActiveStep = activeStepNum => {
 
 //get active panel
 const getActivePanel = () => {
-  debugger
   let activePanel;
   DOMstrings.stepFormPanels.forEach(elem => {
       if (elem.classList.contains('js-active')) {
@@ -73,7 +57,6 @@ const getActivePanel = () => {
 
 //open active panel (and close unactive panels)
 const setActivePanel = activePanelNum => {
-  debugger
   //remove active class from all the panels
   removeClasses(DOMstrings.stepFormPanels, 'js-active');
   //show active panel
@@ -87,20 +70,17 @@ const setActivePanel = activePanelNum => {
 
 //set form height equal to current panel height
 const formHeight = activePanel => {
-  debugger
   const activePanelHeight = activePanel.offsetHeight;
   DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
 };
 
 const setFormHeight = () => {
-  debugger
   const activePanel = getActivePanel();
   formHeight(activePanel);
 };
 
 //STEPS BAR CLICK FUNCTION
 DOMstrings.stepsBar.addEventListener('click', e => {
-  debugger
   //check if click target is a step button
   const eventTarget = e.target;
   if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
@@ -116,7 +96,6 @@ DOMstrings.stepsBar.addEventListener('click', e => {
 
 //PREV/NEXT BTNS CLICK
 DOMstrings.stepsForm.addEventListener('click', e => {
-  debugger
   const eventTarget = e.target;
   //check if we clicked on `PREV` or NEXT` buttons
   if (!(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`) || eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`))) {
@@ -144,7 +123,6 @@ window.addEventListener('resize', setFormHeight, false);
 //changing animation via animation select !!!YOU DON'T NEED THIS CODE (if you want to change animation type, just change form panels data-attr)
 
 const setAnimationType = newType => {
-  debugger
   DOMstrings.stepFormPanels.forEach(elem => {
       elem.dataset.animation = newType;
   });
@@ -154,7 +132,6 @@ const setAnimationType = newType => {
 const animationSelect = document.querySelector('.pick-animation__select');
 
 animationSelect.addEventListener('change', () => {
-  debugger
   const newAnimationType = animationSelect.value;
   setAnimationType(newAnimationType);
 });
