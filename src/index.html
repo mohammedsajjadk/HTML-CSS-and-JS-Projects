@@ -15,6 +15,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -156,13 +160,6 @@
                         </div>
                       </div>
                       <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Phone Number"
-                          />
-                        </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
@@ -170,9 +167,14 @@
                             placeholder="Organization"
                           />
                         </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="Phone Number"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
@@ -260,40 +262,78 @@
                     class="multisteps-form__panel shadow p-4 rounded bg-white"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Your Order Info</h3>
+                    <h3 class="multisteps-form__title">Application Details</h3>
                     <div class="multisteps-form__content">
-                      <div class="row">
-                        <div class="col-12 col-md-6 mt-4">
-                          <div class="card shadow-sm">
-                            <div class="card-body">
-                              <h5 class="card-title">Item Title</h5>
-                              <p class="card-text">
-                                Small and nice item description
-                              </p>
-                              <a
-                                class="btn btn-primary"
-                                href="#"
-                                title="Item Link"
-                                >Item Link</a
-                              >
-                            </div>
-                          </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="No. of Complex Application (High)"
+                          />
                         </div>
-                        <div class="col-12 col-md-6 mt-4">
-                          <div class="card shadow-sm">
-                            <div class="card-body">
-                              <h5 class="card-title">Item Title</h5>
-                              <p class="card-text">
-                                Small and nice item description
-                              </p>
-                              <a
-                                class="btn btn-primary"
-                                href="#"
-                                title="Item Link"
-                                >Item Link</a
-                              >
-                            </div>
-                          </div>
+                        <!-- <div class="col"> -->
+                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="No. of Complex Application (Medium)"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="No. of Complex Application (Low)"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="button-row d-flex mt-4 col-12">
+                          <button
+                            class="btn btn-primary js-btn-prev"
+                            type="button"
+                            title="Prev"
+                          >
+                            Prev
+                          </button>
+                          <button
+                            class="btn btn-primary ml-auto js-btn-next"
+                            type="button"
+                            title="Next"
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--single form panel-->
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Project Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label>Please choose the project type:</label>
+                        <div class="">
+                          <input
+                            class="multisteps-form__input"
+                            type="radio"
+                            id="enterprise-wide"
+                            name="project-type"
+                          />
+                          <label for="enterprise-wide">Enterprise Wide</label>
+                        </div>
+                        <div class="">
+                          <input
+                            class="multisteps-form__input"
+                            type="radio"
+                            id="project-specific"
+                            name="project-type"
+                          />
+                          <label for="project-specific">Project Specific</label>
                         </div>
                       </div>
                       <div class="row">
@@ -354,5 +394,6 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></script>
   </body>
 </html>
