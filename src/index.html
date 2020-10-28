@@ -3,17 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sajjad's Estimation Tool</title>
+    <title>Estimation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://www.google.com/s2/favicons?domain=jacinto.design"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
-      <h1 class="header__title">Multi Steps Form with animations</h1>
-      <div class="header__btns btns">
+      <h1 class="header__title">Estimation</h1>
+      <!-- <div class="header__btns btns">
         <a
           class="header__btn btn"
           href="https://github.com/nat-davydova/multisteps-form"
@@ -21,11 +30,11 @@
           target="_blank"
           >Check on Github</a
         >
-      </div>
+      </div> -->
     </header>
     <div class="content">
       <div class="content__inner">
-        <div class="container">
+        <!-- <div class="container">
           <h2 class="content__title content__title--m-sm">
             Pick animation type
           </h2>
@@ -45,83 +54,104 @@
           <h2 class="content__title">
             Click on steps or 'Prev' and 'Next' buttons
           </h2>
-        </div>
+        </div> -->
         <div class="container overflow-hidden">
           <div class="multisteps-form">
             <div class="row">
-              <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+              <div class="col-12 col-lg-8 col-lg-12 ml-auto mr-auto mb-4">
                 <div class="multisteps-form__progress">
                   <button
                     class="multisteps-form__progress-btn js-active"
                     type="button"
                     title="User Info"
                   >
-                    User Info
+                    Requestor
                   </button>
                   <button
                     class="multisteps-form__progress-btn"
                     type="button"
                     title="Address"
                   >
-                    Address
+                    Client
                   </button>
                   <button
                     class="multisteps-form__progress-btn"
                     type="button"
                     title="Order Info"
                   >
-                    Order Info
+                    Application
                   </button>
                   <button
                     class="multisteps-form__progress-btn"
                     type="button"
                     title="Comments"
                   >
-                    Comments
+                    Project
                   </button>
+                  <!-- New -->
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Environment
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Infrastructure
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Cloud
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Tools & Functions
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Output
+                  </button>
+                  <!-- New End -->
                 </div>
               </div>
             </div>
             <!--form panels-->
             <div class="row">
-              <div class="col-12 col-lg-8 m-auto">
+              <div class="col-12 col-lg-12 m-auto">
                 <form class="multisteps-form__form">
                   <!--single form panel-->
                   <div
                     class="multisteps-form__panel shadow p-4 rounded bg-white js-active"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Your User Info</h3>
+                    <h3 class="multisteps-form__title">Requestor Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
-                            placeholder="First Name"
-                          />
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Last Name"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Login"
+                            placeholder="Company *"
                           />
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="email"
-                            placeholder="Email"
+                            placeholder="Email Address"
                           />
                         </div>
                       </div>
@@ -129,15 +159,24 @@
                         <div class="col-12 col-sm-6">
                           <input
                             class="multisteps-form__input form-control"
-                            type="password"
-                            placeholder="Password"
+                            type="text"
+                            placeholder="Phone Number"
                           />
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
-                            type="password"
-                            placeholder="Repeat Password"
+                            type="email"
+                            placeholder="Organization"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="Region *"
                           />
                         </div>
                       </div>
@@ -157,23 +196,22 @@
                     class="multisteps-form__panel shadow p-4 rounded bg-white"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Your Address</h3>
+                    <h3 class="multisteps-form__title">Client Info</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <div class="col">
+                        <div class="col-12 col-sm-6">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
-                            placeholder="Address 1"
+                            placeholder="Client Name *"
                           />
                         </div>
-                      </div>
-                      <div class="form-row mt-4">
-                        <div class="col">
+                        <!-- <div class="col"> -->
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
-                            placeholder="Address 2"
+                            placeholder="Client Line of Business"
                           />
                         </div>
                       </div>
@@ -182,22 +220,22 @@
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
-                            placeholder="City"
+                            placeholder="Client Contact"
                           />
                         </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <div class="col-12 col-sm-6">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="Client Region *"
+                          />
+                        </div>
+                        <!-- <div class="col-6 col-sm-3 mt-4 mt-sm-0">
                           <select class="multisteps-form__select form-control">
                             <option selected="selected">State...</option>
                             <option>...</option>
                           </select>
-                        </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
-                          <input
-                            class="multisteps-form__input form-control"
-                            type="text"
-                            placeholder="Zip"
-                          />
-                        </div>
+                        </div> -->
                       </div>
                       <div class="button-row d-flex mt-4">
                         <button
