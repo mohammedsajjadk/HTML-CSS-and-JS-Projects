@@ -265,7 +265,7 @@
                     <h3 class="multisteps-form__title">Application Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
@@ -273,14 +273,14 @@
                           />
                         </div>
                         <!-- <div class="col"> -->
-                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
                             placeholder="No. of Complex Application (Medium)"
                           />
                         </div>
-                        <div class="col-6 col-sm-5 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="text"
@@ -316,24 +316,36 @@
                     <h3 class="multisteps-form__title">Project Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <label>Please choose the project type:</label>
-                        <div class="col">
-                          <input
-                            class="multisteps-form__input"
-                            type="radio"
-                            id="enterprise-wide"
-                            name="project-type"
-                          />
-                          <label for="enterprise-wide">Enterprise Wide</label>
-                        </div>
-                        <div class="col">
-                          <input
-                            class="multisteps-form__input"
-                            type="radio"
-                            id="project-specific"
-                            name="project-type"
-                          />
-                          <label for="project-specific">Project Specific</label>
+                        <label class="mr-2"
+                          >Please choose the project type:</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="customRadio1"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customRadio1"
+                              >Enterprise Wide</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="customRadio2"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customRadio2"
+                              >Project Specific</label
+                            >
+                          </div>
                         </div>
                       </div>
                       <div class="row">
@@ -361,13 +373,23 @@
                     class="multisteps-form__panel shadow p-4 rounded bg-white"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Additional Comments</h3>
+                    <h3 class="multisteps-form__title">Environment Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <textarea
-                          class="multisteps-form__textarea form-control"
-                          placeholder="Additional Comments and Requirements"
-                        ></textarea>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of SIT environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of UAT environments"
+                          />
+                        </div>
                       </div>
                       <div class="button-row d-flex mt-4">
                         <button
@@ -378,12 +400,281 @@
                           Prev
                         </button>
                         <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                        <!-- <button
                           class="btn btn-success ml-auto"
                           type="button"
                           title="Send"
                         >
                           Send
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--single form panel-->
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">
+                      Infrastructure Details
+                    </h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of Servers"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="Server Configuration"
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
                         </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                        <!-- <button
+                          class="btn btn-success ml-auto"
+                          type="button"
+                          title="Send"
+                        >
+                          Send
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--single form panel-->
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Cloud Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label class="mr-2"
+                          >Do you have a cloud platform?</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="cloudPlatform-Yes"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="cloudPlatform-Yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="cloudPlatform-No"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="cloudPlatform-No"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-6 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="text"
+                            placeholder="What's your cloud platform? AWS, Azure, etc."
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                        <!-- <button
+                          class="btn btn-success ml-auto"
+                          type="button"
+                          title="Send"
+                        >
+                          Send
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--single form panel-->
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Tools & Functions</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label class="mr-2"
+                          >Is this a new or existing tool?</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="new-tool"
+                              name="new-tool"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="new-tool"
+                              >New</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="existing-tool"
+                              name="new-tool"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="existing-tool"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <label class="mr-2">Is Function Required?</label>
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="fn-req-yes"
+                              name="fn-req"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="fn-req-yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="fn-req-no"
+                              name="fn-req"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="fn-req-no"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                        <!-- <button
+                          class="btn btn-success ml-auto"
+                          type="button"
+                          title="Send"
+                        >
+                          Send
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--single form panel-->
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Environment Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of SIT environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of UAT environments"
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                        <!-- <button
+                          class="btn btn-success ml-auto"
+                          type="button"
+                          title="Send"
+                        >
+                          Send
+                        </button> -->
                       </div>
                     </div>
                   </div>

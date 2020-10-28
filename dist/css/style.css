@@ -241,10 +241,6 @@ body a {
   width: 95%;
   margin: 0 auto 50px; }
 
-@media screen and (min-width: 1400px) {
-  .container {
-    max-width: 1540px; } }
-
 .content__title {
   margin-bottom: 40px;
   font-size: 20px;
