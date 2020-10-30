@@ -36,15 +36,18 @@ connection.connect(function (err) {
   console.log('Connected....!')
 })
 
-app.post('/submit', function (req, res) {
-  console.log('Submitting...!!!!')
-  var sql = "insert into users values('"+uuidv4()+"','"+req.body.firstName+"','"+req.body.lastName+"',"+req.body.noOfEnv+","+req.body.totalUsers+","+req.body.noOfServers+","+req.body.noOfPhysicalServers+",'"+req.body.username+"','"+req.body.phoneNumber+"')"
-  connection.query(sql, function (err) {
-    if (err) throw err
-    res.render('index', { title: 'Data Saved!!!', message: 'Data save success!'})
-  })
-// connection.end();
-})
+// app.post('/submit', function (req, res) {
+//   console.log('Submitting...!!!!')
+//   var sql = "insert into users values('"+req.body.companyName+"')"
+//   connection.query(sql, function (err) {
+//     if (err) throw err
+//     console.log("data saved!")
+//     connection.end();
+//     console.log("Connection ended!")
+//     //   res.render('index', { title: 'Data Saved!!!', message: 'Data save success!'})
+//     // res.render('', {req: req.body});
+//   })
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

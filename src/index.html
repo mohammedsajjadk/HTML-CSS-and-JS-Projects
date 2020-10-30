@@ -1,114 +1,637 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Estimation Tool | Smart Foundry</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Estimation</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <h3>Estimation <span>Tool</span></h3>
-      <div class="progress-bar">
-        <div class="step">
-          <p>Custo</p>
-          <div class="bullet">
-            <span>1</span>
+    <header class="header">
+      <h1 class="header__title">Estimation</h1>
+    </header>
+    <div class="content">
+      <div class="content__inner">
+        <div class="container overflow-hidden">
+          <div class="multisteps-form">
+            <div class="row">
+              <div class="col-12 col-lg-8 col-lg-12 ml-auto mr-auto mb-4">
+                <div class="multisteps-form__progress">
+                  <button
+                    class="multisteps-form__progress-btn js-active"
+                    type="button"
+                    title="User Info"
+                  >
+                    Requestor
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Address"
+                  >
+                    Client
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Order Info"
+                  >
+                    Application
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Project
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Environment
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Infrastructure
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Cloud
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Tools & Functions
+                  </button>
+                  <button
+                    class="multisteps-form__progress-btn"
+                    type="button"
+                    title="Comments"
+                  >
+                    Summary
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-12 m-auto">
+                <form
+                  class="multisteps-form__form"
+                  action="/submit"
+                  method="post"
+                >
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white js-active"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Requestor Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input
+                            type="text"
+                            class="multisteps-form__input form-control"
+                            name="companyName"
+                            id="companyName"
+                            value="Capgemini"
+                            required
+                          />
+                          <label for="companyName">Company *</label>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="email"
+                            placeholder="Email Address"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="email"
+                            placeholder="Organization"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Phone Number"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            type="text"
+                            class="multisteps-form__input form-control"
+                            id="region"
+                            required
+                          />
+                          <label for="region">Region *</label>
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Client Info</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Client Name *"
+                          />
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Client Line of Business"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Client Contact"
+                          />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Client Region *"
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Application Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="No. of Complex Application (High)"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="No. of Complex Application (Medium)"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="No. of Complex Application (Low)"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="button-row d-flex mt-4 col-12">
+                          <button
+                            class="btn btn-primary js-btn-prev"
+                            type="button"
+                            title="Prev"
+                          >
+                            Prev
+                          </button>
+                          <button
+                            class="btn btn-primary ml-auto js-btn-next"
+                            type="button"
+                            title="Next"
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Project Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label class="mr-2"
+                          >Please choose the project type:</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="customRadio1"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customRadio1"
+                              >Enterprise Wide</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="customRadio2"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customRadio2"
+                              >Project Specific</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="button-row d-flex mt-4 col-12">
+                          <button
+                            class="btn btn-primary js-btn-prev"
+                            type="button"
+                            title="Prev"
+                          >
+                            Prev
+                          </button>
+                          <button
+                            class="btn btn-primary ml-auto js-btn-next"
+                            type="button"
+                            title="Next"
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Environment Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of SIT environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of UAT environments"
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">
+                      Infrastructure Details
+                    </h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="No. of Servers"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="Server Configuration"
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Cloud Details</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label class="mr-2"
+                          >Do you have a cloud platform?</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="cloudPlatform-Yes"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="cloudPlatform-Yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="cloudPlatform-No"
+                              name="customRadio"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="cloudPlatform-No"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-6 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            placeholder="What's your cloud platform? AWS, Azure, etc."
+                          />
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Tools & Functions</h3>
+                    <div class="multisteps-form__content">
+                      <div class="form-row mt-4">
+                        <label class="mr-2"
+                          >Is this a new or existing tool?</label
+                        >
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="new-tool"
+                              name="new-tool"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="new-tool"
+                              >New Tool</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="existing-tool"
+                              name="new-tool"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="existing-tool"
+                              >Existing Tool</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <label class="mr-2">Is Function Required?</label>
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="fn-req-yes"
+                              name="fn-req"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="fn-req-yes"
+                              >Yes</label
+                            >
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input
+                              type="radio"
+                              id="fn-req-no"
+                              name="fn-req"
+                              class="custom-control-input"
+                            />
+                            <label class="custom-control-label" for="fn-req-no"
+                              >No</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                        <button
+                          class="btn btn-success js-btn-next ml-auto submit"
+                          type="submit"
+                          name="submit"
+                          title="Submit"
+                        >
+                          Send
+                        </button>
+                        <!-- <button
+                          class="btn btn-primary ml-auto js-btn-next"
+                          type="button"
+                          title="Next"
+                        >
+                          Next
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="multisteps-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="multisteps-form__title">Summary</h3>
+                    <p class="text-center">
+                      Your estimated overall costs per year is
+                      <span class="font-weight-bold">$890,020.00</span>
+                    </p>
+                    <p class="text-center">
+                      Your reference number for this quotation is
+                      <span class="font-weight-bold">123456789</span>
+                    </p>
+                    <div class="multisteps-form__content">
+                      <div class="table-responsive">
+                        <table
+                          class="table table-striped table-bordered table-hover"
+                        >
+                          <thead>
+                            <tr class="bg-primary text-white">
+                              <th colspan="2">Financial Estimation</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Onshore Costs Per Year</th>
+                              <td scope="col">$438,900.00</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Offshore Costs Per Year</th>
+                              <td scope="col">$351,120.00</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                Estimated Effort Costs Per Year
+                              </th>
+                              <td scope="col">$790,020.00</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                Approximate Tool Costs Per Year
+                              </th>
+                              <td scope="col">$100,000.00</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Onshore Costs Per Year</th>
+                              <td scope="col">$438,900.00</td>
+                            </tr>
+                            <tr class="bg-primary text-white">
+                              <th scope="row">
+                                Estimated Overall Costs Per Year
+                              </th>
+                              <td scope="col">$890,020.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="button-row d-flex mt-4">
+                        <button
+                          class="btn btn-primary js-btn-prev"
+                          type="button"
+                          title="Prev"
+                        >
+                          Prev
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="check fas fa-check"></div>
         </div>
-        <div class="step">
-          <p>Enviro</p>
-          <div class="bullet">
-            <span>2</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Server</p>
-          <div class="bullet">
-            <span>3</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Submit</p>
-          <div class="bullet">
-            <span>4</span>
-          </div>
-          <div class="check fas fa-check"></div>
-        </div>
-      </div>
-      <div class="form-outer">
-        <form action="/submit" method="post">
-          <div class="page slide-page">
-            <div class="title">Customer Info:</div>
-            <div class="field">
-              <div class="label">First Name</div>
-              <input type="text" name="firstName" />
-            </div>
-            <div class="field">
-              <div class="label">Last Name</div>
-              <input type="text" name="lastName" />
-            </div>
-            <div class="field">
-              <button class="firstNext next">Next</button>
-            </div>
-          </div>
-          <div class="page">
-            <div class="title">Environment Info:</div>
-            <div class="field">
-              <div class="label">Overall Number of Environments</div>
-              <input type="number" name="noOfEnv" />
-            </div>
-            <div class="field">
-              <div class="label">Total Users (Dev + QA)</div>
-              <input type="number" name="totalUsers" />
-            </div>
-            <div class="field btns">
-              <button class="prev-1 prev">Previous</button>
-              <button class="next-1 next">Next</button>
-            </div>
-          </div>
-          <div class="page">
-            <div class="title">Server Info:</div>
-            <div class="field">
-              <div class="label">Total number of Servers</div>
-              <input type="number" name="noOfServers" />
-            </div>
-            <div class="field">
-              <div class="label">Number of Physical Servers</div>
-              <input type="number" name="noOfPhysicalServers" />
-            </div>
-            <div class="field btns">
-              <button class="prev-2 prev">Previous</button>
-              <button class="next-2 next">Next</button>
-            </div>
-          </div>
-          <div class="page">
-            <div class="title">Contact Details:</div>
-            <div class="field">
-              <div class="label">Username</div>
-              <input type="text" name="username" />
-            </div>
-            <div class="field">
-              <div class="label">Phone Number</div>
-              <input type="number" name="phoneNumber" />
-            </div>
-            <div class="field btns">
-              <button class="prev-3 prev">Previous</button>
-              <button class="submit" name="submit">Submit</button>
-            </div>
-          </div>
-        </form>
       </div>
     </div>
-    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
