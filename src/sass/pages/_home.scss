@@ -244,6 +244,11 @@ input[type="text"] {
     transform: translate(-12%, -52%) scale(0.75);
   }
 }
+
+.invalid {
+  border: 1px solid red;
+}
+
 input[type="text"] + label {
   position: absolute;
   top: -0.7rem;
@@ -251,7 +256,7 @@ input[type="text"] + label {
   color: #757575;
   font-size: 1rem;
   line-height: 60px;
-  // @include transition(0.2s ease);
+  transition: transform 0.3s;
 }
 
 .relative {
