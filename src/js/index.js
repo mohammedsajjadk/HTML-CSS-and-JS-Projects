@@ -1,14 +1,18 @@
 const loader = document.getElementById("loader");
 const imgContainerEle = document.querySelector(".image-container");
 
-let count = 5; // Initially setting the count to 5 because we want the images to load fast
+// Initially setting the count to 5 because we want the images to load fast
+let isInitialLoad = true;
+let initialCount = 5;
+
 let ready = false; // this will be true only when all images are loaded
 let imagesLoaded = 0;
 let totalImages = 0;
+
 let photosArray = [];
 const apiKey1 = "oDHV8TR0kheFQcHwoAhQRAPmig0hMcB-W2tMmV3faDc";
 const apiKey2 = "qCqkAIj0hmlBopR1SF8GabFnaY8ptUAiH8aU5WfaQoI";
-let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey1}&count=${count}`;
+let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey1}&count=${initialCount}`;
 
 // Check if all images were loaded
 function allImageLoaded() {
@@ -18,12 +22,26 @@ function allImageLoaded() {
     loader.hidden = true; // this will be hidden once we load the images for first time, then it will stay hidden (meaning, we won't make this false)
   }
 }
+
+// Changing the APIUrl count
+function updateAPIURLWithNewCount(picCount) {
+  apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey1}&count=${picCount}`;
+}
+
 // Get photos from Unsplash API
 async function getPhotos() {
   try {
     const response = await fetch(apiUrl);
     photosArray = await response.json();
     displayPhotos();
+    /* 
+      Once the photos are loaded, I am changing the count to 20 and changing the API URL as well
+      So, next time when getPhotos() is called, we will get 20 images.
+    */
+    if (isInitialLoad) {
+      updateAPIURLWithNewCount(20);
+      isInitialLoad = false;
+    }
   } catch (error) {
     alert("Error Fetching API. May be the limit has exceeded!!!!");
   }
@@ -72,8 +90,5 @@ window.addEventListener("scroll", () => {
 
 getPhotos();
 
-/* Once the photos are loaded, I am changing the count to 20 and changing the API URL as well
-So, when I scroll, getPhotos() will get triggered which has fetch(apiUrl) and in that 'apiUrl' will be the below one.
-*/
-count = 20;
-apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey1}&count=${count}`;
+// count = 20;
+// apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey1}&count=${count}`;
