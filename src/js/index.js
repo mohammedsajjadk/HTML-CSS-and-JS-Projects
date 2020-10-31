@@ -61,9 +61,6 @@ const markUp = (href, url, description) =>
 `;
 
 window.addEventListener("scroll", () => {
-  console.log(
-    `window.innerHeight:${window.innerHeight} window.scrollY${window.scrollY} offsetHeight${document.body.offsetHeight}`
-  );
   if (
     window.innerHeight + window.scrollY > document.body.offsetHeight - 1000 &&
     ready
