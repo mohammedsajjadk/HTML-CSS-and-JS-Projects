@@ -10,7 +10,9 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Uncomment line 14 and delete line 15 before making it to prod -->
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../dist/css/style.css" type="text/css" />
     <title>Infinity Scroll</title>
   </head>
   <body>
@@ -18,10 +20,11 @@
     <h1>Unsplash API - Infinite Scroll</h1>
     <!-- Loader -->
     <div class="loader" id="loader">
-      <img src="img/loader.svg" alt="Loading" />
+      <img src="../dist/img/loader.svg" alt="Loading" />
     </div>
     <!-- Image Container -->
     <div class="image-container" id="image-container"></div>
     <!-- Script -->
+    <script src="js/index.js"></script>
   </body>
 </html>
