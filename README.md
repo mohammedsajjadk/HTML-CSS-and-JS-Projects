@@ -1,74 +1,53 @@
-# Video Explanation
-> If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
+## How this works
+Read this - https://css-tricks.com/an-introduction-to-the-picture-in-picture-web-api/
+and https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API
 
-# Cloning & Creating Your Own Project
+Then read the comments in src/js/index.js
 
-## METHOD 1
+## APIs
 
-If you want to create a new branch inside https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Boilerplate-For-HTML-CSS-JS and continue then follow below steps:
+APIs Used:
+```
+https://css-tricks.com/an-introduction-to-the-picture-in-picture-web-api/
+https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API
+```
 
-1. Go to https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Boilerplate-For-HTML-CSS-JS
-2. Click the dropdown
-3. In the text box, enter your new branch name
-4. You will see the following: **Create branch: YourBranchName from 'Boilerplate-For-HTML-CSS-JS'**. Click it and your branch is created.
-5. Now go to any folder in your PC --> Open Command Prompt --> Clone the project from github. Use
-   ```
-   git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
-   ```
-6. Rename the folder (later, if required), then go inside that folder and open CMD again
-7. Enter the below command:
-   ```
-   git checkout <Your New Branch Name>
-      Example: git checkout YourBranchName
-   ```
+## Installation and how to run this project
 
-## METHOD 2
+1. Go to any folder --> Open Command Prompt --> Clone the project from github. Use
 
-If you want to create a new repository and then work on it, then go to https://github.com/mohammedsajjadk and follow below the below steps
+```
+git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
+```
 
-1. Click "+" button --> New Repository --> Enter repository name --> click "Create Repository"
-2. Now go to any folder in your PC --> Open Command Prompt --> Clone the project from github. Use
-   ```
-   git clone https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects.git
-      (YES, You need to clone this repo only!)
-   ```
-3. Rename the folder (later, if required), then go inside that folder and open CMD again
-4. Enter the below command:
-   ```
-   git checkout Boilerplate-For-HTML-CSS-JS
-      (YES, You need to clone this branch only!)
-   ```
-5. Delete .git folder
-6. Open CMD again
-   ```
-   git init
-   git remote add origin <Your New Repo .git link>
-   ```
-7. Run the below git commands
-   ```
-   a) (Optional) To switch the branch, use below command:
-        git switch -c <Branch name>
-           Example: git switch -c Todo-App
-   b) git add .
-   c) git commit -m "Initial commit"
-   d) git push -f origin <Branch Name>
-        Example: git push -f origin master
-   ```
+2. Either go inside that folder or copy the contents inside that folder to the folder you want. Enter this command
 
-# NPM Commands
+```
+git checkout Picture-In-Picture
+```
 
-1.  Open the project in VS Code
-2.  Run the below command to download a package and it's dependencies
+3. Run the below command
 
 ```
 npm install
 ```
 
-2. Open command prompt (in the project root directory) and enter the below command & hit ENTER
-   ```
-   npm run start
-   ```
-   You will get a message in the terminal like 'Project is running at http://localhost:8080/', go to that address in your browser
+4. Open command prompt (in the project root directory) -> Type below command and hit Enter
+
+```
+npm run start
+```
+
+5. In the browser, localhost:8080 or some other localhost port will open
+
+
+## Production
+
+https://mo-pip.netlify.app/
+
+# Project Structure
+
+Watch this - https://www.youtube.com/playlist?list=PLdm1zXPAFR0g-_Co92sTVznIfG1tnI2Yo
 
 # Project Structure Explanation
 
