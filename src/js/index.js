@@ -125,10 +125,10 @@ window.addEventListener('load', setFormHeight, false);
 window.addEventListener('resize', setFormHeight, false);
 
 
-document.querySelector('form').addEventListener('submit', e => {
-  e.preventDefault();
-  console.log('Submitted')
-})
+// document.querySelector('form').addEventListener('submit', e => {
+//   e.preventDefault();
+//   console.log('Submitted')
+// })
 
 function validateForm(activePanelNum) {
   // This function deals with validation of the form fields
