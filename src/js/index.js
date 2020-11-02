@@ -153,3 +153,21 @@ function validateForm(activePanelNum) {
   // }
   return valid; // return the valid status
 }
+
+document.querySelector('.cloudPlatform').addEventListener('click', (e) => {
+  if(e.target.matches('#cloudPlatform-Yes')) {
+    e.target.setAttribute('checked', 'checked')
+    document.querySelector('.cloudPlatform #cloudPlatform-No').setAttribute('checked', '')
+    document.querySelector('.cloud-Yes-Form').hidden = false;
+  } else if(e.target.matches('#cloudPlatform-No')) {
+    e.target.setAttribute('checked', 'checked')
+    document.querySelector('.cloudPlatform #cloudPlatform-Yes').setAttribute('checked', '')
+    document.querySelector('.cloud-Yes-Form').hidden = true;
+  } 
+})
+
+// if(document.querySelector('input[id="cloudPlatform-Yes"]:checked')) {
+//       document.querySelector('.new-form').hidden = false;
+// } else if(document.querySelector('input[id="cloudPlatform-No"]:checked')) {
+//       document.querySelector('.new-form').hidden = true;
+// }

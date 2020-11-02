@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Estimation</title>
+    <title>Capgemini Estimation Calculator</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&amp;display=swap"
       rel="stylesheet"
@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -118,7 +119,7 @@
                             value="Capgemini"
                             required
                           />
-                          <label for="companyName">Company *</label>
+                          <label for="companyName">Company * </label>
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
@@ -276,27 +277,27 @@
                           <div class="custom-control custom-radio">
                             <input
                               type="radio"
-                              id="customRadio1"
-                              name="customRadio"
+                              id="enterprise-wide"
+                              name="project-type"
                               class="custom-control-input"
                               checked="checked"
                             />
                             <label
                               class="custom-control-label"
-                              for="customRadio1"
+                              for="enterprise-wide"
                               >Enterprise Wide</label
                             >
                           </div>
                           <div class="custom-control custom-radio">
                             <input
                               type="radio"
-                              id="customRadio2"
-                              name="customRadio"
+                              id="project-specific"
+                              name="project-type"
                               class="custom-control-input"
                             />
                             <label
                               class="custom-control-label"
-                              for="customRadio2"
+                              for="project-specific"
                               >Project Specific</label
                             >
                           </div>
@@ -329,18 +330,41 @@
                     <h3 class="multisteps-form__title">Environment Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="number"
-                            placeholder="No. of SIT environments"
+                            placeholder="Number of End to End Environments"
                           />
                         </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="number"
-                            placeholder="No. of UAT environments"
+                            placeholder="Number of System Test Environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of SIT Environments"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of UAT Environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of Other Environments"
                           />
                         </div>
                       </div>
@@ -371,17 +395,87 @@
                     </h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
                             type="number"
-                            placeholder="No. of Servers"
+                            placeholder="Number of Interfaces"
                           />
                         </div>
-                        <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
-                            placeholder="Server Configuration"
+                            type="number"
+                            placeholder="Total number of Servers"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of Physical Servers"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of Virtual Environments"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="What are the different Operating Systems in use"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of DEPLOYMENTS (Annually)"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of Environment Incidents during Testing in previous six months"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Test Environment Downtime (Annual - Hours)"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="% of automation in environments (deployment, cloud, service virtualisation etc..)"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="What is the release frequency? (Monthly ,Yearly,Quarterly)"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="multisteps-form__input form-control"
+                            type="number"
+                            placeholder="Number of releases in a calendar year"
                           />
                         </div>
                       </div>
@@ -413,14 +507,13 @@
                         <label class="mr-2"
                           >Do you have a cloud platform?</label
                         >
-                        <div class="col-6 col-sm-2 mt-4 mt-sm-0">
+                        <div class="col-6 col-sm-2 mt-4 mt-sm-0 cloudPlatform">
                           <div class="custom-control custom-radio">
                             <input
                               type="radio"
                               id="cloudPlatform-Yes"
-                              name="customRadio"
-                              class="custom-control-input"
-                              checked="checked"
+                              name="cloudPlatform"
+                              class="custom-control-input cloudPlatform-Yes"
                             />
                             <label
                               class="custom-control-label"
@@ -432,8 +525,9 @@
                             <input
                               type="radio"
                               id="cloudPlatform-No"
-                              name="customRadio"
-                              class="custom-control-input"
+                              name="cloudPlatform"
+                              class="custom-control-input cloudPlatform-No"
+                              checked="checked"
                             />
                             <label
                               class="custom-control-label"
@@ -443,11 +537,21 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form-row mt-4">
+                      <div class="form-row mt-4 cloud-Yes-Form" hidden>
                         <div class="col-6 col-sm-6 mt-4 mt-sm-0">
+                          <select class="multisteps-form__select form-control">
+                            <option selected="selected" hidden>
+                              What's your cloud platform?
+                            </option>
+                            <option>AWS</option>
+                            <option>Azure</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input
                             class="multisteps-form__input form-control"
-                            placeholder="What's your cloud platform? AWS, Azure, etc."
+                            type="number"
+                            placeholder="What % of applications are already on cloud"
                           />
                         </div>
                       </div>
@@ -564,14 +668,17 @@
                     class="multisteps-form__panel shadow p-4 rounded bg-white"
                     data-animation="scaleIn"
                   >
-                    <h3 class="multisteps-form__title">Summary</h3>
-                    <p class="text-center">
-                      Your estimated overall costs per year is
-                      <span class="font-weight-bold">$890,020.00</span>
-                    </p>
+                    <h3 class="multisteps-form__title glyphicon glyphicon-ok">
+                      Submission Successful
+                      <ion-icon name="checkmark-done-outline"></ion-icon>
+                    </h3>
                     <p class="text-center">
                       Your reference number for this quotation is
-                      <span class="font-weight-bold">123456789</span>
+                      <span class="font-weight-bold font-new">123456789</span>
+                    </p>
+                    <p class="text-center">
+                      Your estimated overall costs per year is
+                      <span class="font-weight-bold font-new">$890,020.00</span>
                     </p>
                     <div class="multisteps-form__content">
                       <div class="table-responsive">
