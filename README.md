@@ -1,5 +1,59 @@
-# Video Explanation
-> If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
+## Flowchart
+Check this [Flowchart](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Joke-Teller/dist/Joke+Teller+Flowchart.png)
+
+# API
+You need two APIs for this project: a) Random joke teller API and b) Speech to text converter
+
+## Sample Joke API Endpoint
+You don't need API key for this API
+```
+https://sv443.net/jokeapi/v2/joke/Any
+```
+
+## Speech to text API
+You have so many free APIs in rapidapi website. One of them is the below:
+```
+http://www.voicerss.org/api/
+```
+and the above one is what have used in this project. In this site, API key is mandatory, so go to the below site, register, activate your email
+```
+http://www.voicerss.org/personel/
+```
+Once you have activated, you would have got the API key, put that in the below GET request. Below is the sample request where we can see Hello world text being converted to speech
+Finally, there is this SDK page which will have a minified JS file that will handle the core functionality, download the JS file from below site. This is the file you will see here - src\js\voiceRSS.js, but a few things are changed. 
+That is, if you go to src\js\voiceRSS.js, you will see a _request method, inside that we are setting the 'audio' element's 'src' tag to the response we get from API. 
+```
+http://www.voicerss.org/sdk/javascript.aspx
+```
+What is the response we get? If you check the Documentation in the above link, you will have below where you will pass your API key, src which we will convert text to speech. So, you have put this in index.js and you are calling 'speech' function which will get the response.
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset='utf-8' />
+    <script src='voicerss-tts.min.js'></script>
+</head>
+<body>
+    <script>
+        VoiceRSS.speech({
+            key: '<API key>',
+            src: 'Hello, world!',
+            hl: 'en-us',
+            v: 'Linda',
+            r: 0, 
+            c: 'mp3',
+            f: '44khz_16bit_stereo',
+            ssml: false
+        });
+    </script>
+</body>
+</html>
+```
+Below is sample end point, but you don't need this as you have downloaded the JS file from their website
+```
+https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw
+```
 
 # Cloning & Creating Your Own Project
 

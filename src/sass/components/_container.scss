@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/robot.gif) no-repeat left center/contain; // note the bg size as contain here
+  @include respond(tab-port) {
+    background-position: center center;
+    background-size: cover;
+  }
+}
