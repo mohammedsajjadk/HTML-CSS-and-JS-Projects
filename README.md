@@ -1,5 +1,5 @@
 ## Flowchart
-Check this [Flowchart](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Joke-Teller/dist/Joke+Teller+Flowchart.png)
+Check this [Flowchart](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Joke-Teller/dist/img/Joke%2BTeller%2BFlowchart.png)
 
 # API
 You need two APIs for this project: a) Random joke teller API and b) Speech to text converter
