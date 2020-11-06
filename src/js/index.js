@@ -184,5 +184,10 @@ document.querySelector('.landing-page__form').addEventListener('click', e => {
     document.querySelector('.landing-page__panel').hidden = true;
     // show the search form
     document.querySelector('.search-form__panel').hidden = false;
+  } else if(e.target.classList.contains('.js-btn-search-prev')) {
+    console.log('.js-btn-search-prev clicked')
+    document.querySelector('.search-form__panel').hidden = true;
+    document.querySelector('.landing-page__panel').hidden = false;
+
   }
 })
