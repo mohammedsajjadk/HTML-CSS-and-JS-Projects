@@ -172,13 +172,17 @@ document.querySelector('.cloudPlatform').addEventListener('click', (e) => {
 //       document.querySelector('.new-form').hidden = true;
 // }
 
-document.querySelector('.search-form__form').addEventListener('click', e => {
+document.querySelector('.landing-page__form').addEventListener('click', e => {
   
   if(e.target.classList.contains('js-btn-newq-yes')) {
-    // show the search form
-    console.log('search form')
-  } else if(e.target.classList.contains('js-btn-newq-no')) {
     // show the multistep form
-    console.log('multi step form')
+    document.querySelector('.landing-page').hidden = true;
+    document.querySelector('.multisteps-form').hidden = false;
+  } else if(e.target.classList.contains('js-btn-newq-no')) {
+
+    // Hide the landing page panel
+    document.querySelector('.landing-page__panel').hidden = true;
+    // show the search form
+    document.querySelector('.search-form__panel').hidden = false;
   }
 })

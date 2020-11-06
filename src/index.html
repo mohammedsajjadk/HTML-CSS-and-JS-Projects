@@ -26,19 +26,19 @@
     <div class="content">
       <div class="content__inner">
         <div class="container overflow-hidden">
-          <div class="search-form">
+          <div class="landing-page">
             <div class="row">
-              <div class="col-6 col-lg-6 m-auto">
+              <div class="col-6 col-lg-8 m-auto">
                 <form
-                  class="search-form__form"
+                  class="landing-page__form"
                   action="/submitSearch"
                   method="post"
                 >
                   <div
-                    class="search-form__panel shadow p-4 rounded bg-white js-active"
+                    class="landing-page__panel shadow p-4 rounded bg-white js-active"
                     data-animation="scaleIn"
                   >
-                    <h3 class="search-form__title text-center">
+                    <h3 class="landing-page__title text-center">
                       Do you want to create a new quote?
                     </h3>
                     <div class="button-row text-center mt-4">
@@ -56,6 +56,56 @@
                       >
                         No
                       </button>
+                    </div>
+                  </div>
+                  <div
+                    class="search-form__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                    hidden
+                  >
+                    <h3 class="search-form__title">Narrow down your search</h3>
+                    <div class="search-form__content">
+                      <div class="form-row mt-4">
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="search-form__input form-control"
+                            type="text"
+                            placeholder="Quote Reference Number"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="search-form__input form-control"
+                            type="text"
+                            placeholder="Requestor Name"
+                          />
+                        </div>
+                        <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                          <input
+                            class="search-form__input form-control"
+                            type="text"
+                            placeholder="Client Name"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="button-row d-flex mt-4 col-12">
+                          <button
+                            class="btn btn-primary js-btn-search-prev"
+                            type="button"
+                            title="Prev"
+                          >
+                            Prev
+                          </button>
+                          <button
+                            class="btn btn-primary ml-auto js-btn-search-submit"
+                            type="button"
+                            title="Submit"
+                          >
+                            Search
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </form>
