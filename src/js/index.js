@@ -171,3 +171,14 @@ document.querySelector('.cloudPlatform').addEventListener('click', (e) => {
 // } else if(document.querySelector('input[id="cloudPlatform-No"]:checked')) {
 //       document.querySelector('.new-form').hidden = true;
 // }
+
+document.querySelector('.search-form__form').addEventListener('click', e => {
+  
+  if(e.target.classList.contains('js-btn-newq-yes')) {
+    // show the search form
+    console.log('search form')
+  } else if(e.target.classList.contains('js-btn-newq-no')) {
+    // show the multistep form
+    console.log('multi step form')
+  }
+})

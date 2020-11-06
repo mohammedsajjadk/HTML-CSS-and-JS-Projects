@@ -26,7 +26,43 @@
     <div class="content">
       <div class="content__inner">
         <div class="container overflow-hidden">
-          <div class="multisteps-form">
+          <div class="search-form">
+            <div class="row">
+              <div class="col-6 col-lg-6 m-auto">
+                <form
+                  class="search-form__form"
+                  action="/submitSearch"
+                  method="post"
+                >
+                  <div
+                    class="search-form__panel shadow p-4 rounded bg-white js-active"
+                    data-animation="scaleIn"
+                  >
+                    <h3 class="search-form__title text-center">
+                      Do you want to create a new quote?
+                    </h3>
+                    <div class="button-row text-center mt-4">
+                      <button
+                        class="btn btn-primary ml-auto mr-4 js-btn-newq-yes"
+                        type="button"
+                        title="Yes"
+                      >
+                        Yes
+                      </button>
+                      <button
+                        class="btn btn-primary ml-auto js-btn-newq-no"
+                        type="button"
+                        title="No"
+                      >
+                        No
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="multisteps-form" hidden>
             <div class="row">
               <div class="col-12 col-lg-8 col-lg-12 ml-auto mr-auto mb-4">
                 <div class="multisteps-form__progress">
