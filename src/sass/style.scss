@@ -1,20 +1,11 @@
-@import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animations";
 @import "base/base";
 @import "base/typography";
-@import "base/utilities";
 
 @import "components/navigation";
-@import "components/button";
-@import "components/card";
-@import "components/form";
-@import "components/popup";
-
-@import "layout/footer";
-@import "layout/header";
-@import "layout/navigation";
+@import "components/section";
+@import "components/switch";
 
 @import "pages/home";
