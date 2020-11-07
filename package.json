@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "theme",
   "version": "1.0.0",
-  "description": "Sajjad's Boilerplate project for HTML, CSS and JS projects",
+  "description": "Light and Dark Mode Theme",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass src/sass/style.scss dist/css/style.css -w",
@@ -33,7 +33,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axios": "^0.20.0",
     "babel-polyfill": "^6.26.0"
   }
 }

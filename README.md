@@ -1,11 +1,16 @@
+# Production
+```
+https://mo-lightdarkmode.netlify.app/
+```
 # Quick Notes About This Project
-To have dark and light theme, you need:
-1. different colors for dark and light theme. You can see the colors used in this project [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss)
-2. The svgs used in the project should also have two versions (dark and light). You can do that from this [site](https://undraw.co/illustrations). We will be changing the color from JS, so have _dark and _light at the end of each svgs, see [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Light-and-Dark-Mode/dist/img)
-3. The **TRICK** is that you will have all your variables in :root and \[data-theme="dark"\], see [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss). So, you will do below when you check and uncheck the theme toggle button which is a checkbox:
-```
-document.documentElement.setAttribute('data-theme', 'dark')
-```
+To have dark and light theme:
+1. You need 2 versions of font color & background color for dark and light theme. You can see the colors used in this project [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss). More details to follow:
+2. Likewise, you need 2 versions of same svgs for dark and light theme. You can do that from this [site](https://undraw.co/illustrations). We will be changing the color from JS, so have _dark and _light at the end of each svgs, see [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Light-and-Dark-Mode/dist/img)
+3. Now the **TRICK** is that when you click the toggle switch, which is a checkbox, you will change the font color, background color and svgs. You can see this [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/js/index.js) to understand it.
+
+## More details on colors
+For colors, initially, we are will have all your variables in :root, but when the theme is changed, we will set an attribute called 'data-theme' to HTML using document.documentElement [see line 12](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/js/index.js).
+
 # Some important links for this site
 Designing a dark theme
 ```

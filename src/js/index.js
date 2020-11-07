@@ -17,6 +17,9 @@ function switchTheme(newColor) {
 
     const newtoggleBgColor = newColor === 'light' ? 'rgba(66, 66, 66, 0.6)' : 'rgba(255, 255, 255, 0.5)';
     textBoxEle.style['background-color'] = newtoggleBgColor;
+
+    const checkedStatus = newColor === 'light' ? false: true;
+    checkboxEle.checked = checkedStatus;
 }
 
 checkboxEle.addEventListener('change', e => {
