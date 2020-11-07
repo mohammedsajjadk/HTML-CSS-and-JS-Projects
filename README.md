@@ -1,3 +1,24 @@
+# Some important links for this site
+Designing a dark theme
+```
+https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637
+```
+For colorful svg images
+```
+https://undraw.co/illustrations
+```
+
+https://www.heropatterns.com/
+
+# Quick Notes About This Project
+To have dark and light theme, you need:
+1. different colors for dark and light theme. You can see the colors used in this project [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss)
+2. The svgs used in the project should also have two versions (dark and light). You can do that from this [site](https://undraw.co/illustrations). We will be changing the color from JS, so have _dark and _light at the end of each svgs, see [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/tree/Light-and-Dark-Mode/dist/img)
+3. The key checkpoint is that you will have all your variables in :root and \[data-theme="dark"\], see [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss). So, you will do below when you check and uncheck the theme toggle button which is a checkbox:
+```
+document.documentElement.setAttribute('data-theme', 'dark')
+```
+
 # Video Explanation
 > If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
 

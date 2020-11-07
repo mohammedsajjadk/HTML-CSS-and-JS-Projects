@@ -1,18 +1,20 @@
-// $color-primary: #fbdb89;
-// $color-secondary: #f48982;
-// $color-white: #fff;
-// $color-grey-light-1: #f7f7f7;
-// $color-grey-light-2: #eee;
+:root {
+  --primary-color: rgb(255, 92, 92);
+  --primary-variant: #ff2d2d;
+  --secondary-color: #1b9999;
+  --on-primary: rgb(250, 250, 250);
+  --on-background: rgb(66, 66, 66);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
 
-// $color-grey-dark: #777;
-// $color-grey-dark-2: #999;
-// $color-grey-dark-3: #333;
-
-// // FONT
-// $default-font-size: 1.6rem;
-
-// // GRID
-// $grid-width: 114rem;
-// $gutter-vertical: 8rem;
-// $gutter-vertical-small: 6rem;
-// $gutter-horizontal: 6rem; */
+[data-theme="dark"] {
+  --primary-color: rgb(150, 65, 255);
+  --primary-variant: #6c63ff;
+  --secondary-color: #03dac5;
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --background: #121212;
+}
