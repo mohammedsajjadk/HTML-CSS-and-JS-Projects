@@ -1,7 +1,7 @@
 # Production
-```
 https://mo-lightdarkmode.netlify.app/
-```
+# Video Explanation 
+https://youtu.be/fZ-gr7DWFk8
 # Quick Notes About This Project
 To have dark and light theme:
 1. You need 2 versions of font color & background color for dark and light theme. You can see the colors used in this project [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Light-and-Dark-Mode/src/sass/abstracts/_variables.scss). More details to follow:
