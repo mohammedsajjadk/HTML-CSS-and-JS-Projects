@@ -1,5 +1,49 @@
-# Video Explanation
-> If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
+# Production
+https://mo-animatedtemplate.netlify.app/
+# Quick Notes About This Project
+This project is built on an existing template from https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
+- Go to that site and search 'Beautiful Example Pages' in that website and you will see few example pages, click anyone, for our purpose we will click 'Landing Page' which will take us [here](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/landing).
+- Click the 'Download' button
+- Click 'Download from Github' and unzip it.
+Once unzipped, we will see 4 folders, we need 'Landing Page' folder. Inside that we need 'html-landing-page' folder. Copy the 'landing.html' code and change images, heading etc whatever you need.
+Easiest way to add animation is to add a library from https://michalsnik.github.io/aos/. 
+
+## Using AOS (Animate On Scroll) in our Project
+To install, just use "npm install aos --save", but I have used the below cdn in our head tag
+```
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+```
+then put the AOS JS CDN at the bottom in our HTML
+```
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+```
+To initialize, you need to put this code
+```
+<script>
+  AOS.init();
+</script>
+```
+To delay the animation loading speed, and to load animation only when scrolling down etc, checkout https://github.com/michalsnik/aos
+where you will see that we can pass an object inside AOS.init. Check [here](https://github.com/mohammedsajjadk/HTML-CSS-and-JS-Projects/blob/Animated-Template/src/js/index.js) for the values I have changed.
+
+Now you just copy the animation attribute like below from the AOS [site](https://michalsnik.github.io/aos/) and put it where you want the animation to be applied. Example:
+Copy below
+```
+data-aos="fade-right" data-aos-delay="1000"
+```
+Put it in h1
+```
+<h1 class="text-white font-semibold text-5xl" data-aos="fade-right" data-aos-delay="1000">
+```
+
+# Some important links for this site
+- https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation for the template
+- https://unsplash.com/ for images
+- https://randomuser.me/ Like Lorem Ipsum for people (but we will simply copy image address and put it in src)
+- https://michalsnik.github.io/aos/ for animation on scroll
+- https://github.com/michalsnik/aos
+# Video Explanation About the Project Structure (not the project)
+> If you want to understand the installation, that is about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
 
 # Cloning & Creating Your Own Project
 
@@ -177,4 +221,3 @@ All the compiled css and JS files will be here
 ## index.html file
 
 This is the final index.html which will just have an extra script tag of bundle.js.
-
