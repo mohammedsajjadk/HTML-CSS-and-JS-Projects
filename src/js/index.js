@@ -6,11 +6,11 @@ const textBoxEle = document.querySelector('.text-box')
 function switchTheme(newColor) {
     // Setting to local storage
     localStorage.setItem('theme', newColor)
-   
+    
      // These are the things we are changing when we change the theme
      const currentColor = newColor === 'light' ? 'dark' : 'light';
      document.documentElement.setAttribute('data-theme', newColor) // setting to HTML
-     imageContainerEle.forEach(curr => curr.src = curr.src.replace(currentColor, newColor))
+     imageContainerEle.forEach(curr => curr.src = curr.src.replace(`${currentColor}.svg`, `${newColor}.svg`)) //including .svg as without it was replacing the site url as well.
    
     const newNavBgColor = newColor === 'light' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)';
     navigationEle.style.background = newNavBgColor;
