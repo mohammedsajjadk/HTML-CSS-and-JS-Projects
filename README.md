@@ -13,6 +13,8 @@ Now go to http://localhost:3000 and submit the form
 
 # Project Structure
 **Focus only on 'src' part. **
+## My Notes
+Checkout 'MyNotes Nodejs MySQL Xaamp etc.docx' which is in the root of this project for MySQL, Xaamp notes etc.
 ## app.js
 - This will be inside src/js
 - You need to mention index.html, css, js, engine paths here

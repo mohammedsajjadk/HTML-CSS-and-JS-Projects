@@ -31,8 +31,6 @@ app.set('view engine', 'pug')
 // app.set('views','src/js/views');
 
 app.get('/', function (req, res) {
-  // res.sendFile('index.html', {root: __dirname})
-  // res.sendFile('../index.html', {root: __dirname})
   res.sendFile(path.resolve('../index.html'))
 })
 
