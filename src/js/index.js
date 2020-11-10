@@ -191,3 +191,8 @@ document.querySelector('.landing-page__form').addEventListener('click', e => {
 
   }
 })
+document.getElementById('search-results').addEventListener('click', () => {
+  debugger
+  const f = require('./app')
+  alert(f.data)
+})

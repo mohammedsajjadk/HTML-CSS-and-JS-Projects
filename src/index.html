@@ -100,15 +100,25 @@
                           </button>
                           <button
                             class="btn btn-primary ml-auto js-btn-search-submit"
-                            type="button"
+                            type="submit"
                             title="Submit"
-                            id="search-submit"
+                            href="#search-results"
                           >
                             Search
                           </button>
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  <div
+                    class="search-results__panel shadow p-4 rounded bg-white"
+                    data-animation="scaleIn"
+                    id="search-results"
+                  >
+                    <h3 class="search-results__title">
+                      This is your search results
+                    </h3>
                   </div>
                 </form>
               </div>
@@ -189,7 +199,7 @@
               <div class="col-12 col-lg-12 m-auto">
                 <form
                   class="multisteps-form__form"
-                  action="/submit"
+                  action="/finalSubmit"
                   method="post"
                 >
                   <div
@@ -214,6 +224,8 @@
                           <input
                             class="multisteps-form__input form-control"
                             type="email"
+                            name="email_address"
+                            id="email_address"
                             placeholder="Email Address"
                           />
                         </div>
@@ -236,10 +248,11 @@
                           <input
                             type="text"
                             class="multisteps-form__input form-control"
+                            name="region"
                             id="region"
                             required
                           />
-                          <label for="region">Region *</label>
+                          <label for="region">Region * </label>
                         </div>
                       </div>
                       <div class="button-row d-flex mt-4">
@@ -741,7 +754,7 @@
                           name="submit"
                           title="Submit"
                         >
-                          Send
+                          Submit
                         </button>
                         <!-- <button
                           class="btn btn-primary ml-auto js-btn-next"
