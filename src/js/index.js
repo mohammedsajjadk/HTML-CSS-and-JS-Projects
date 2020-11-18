@@ -135,3 +135,6 @@ function removeFavorite(itemUrl) {
 
 // On Load
 getNasaPictures();
+window.updateDOM = updateDOM
+window.getNasaPictures = getNasaPictures
+
