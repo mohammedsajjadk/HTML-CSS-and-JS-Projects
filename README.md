@@ -1,3 +1,11 @@
+# Production
+https://mo-videoplayer.netlify.app/
+
+# Project Intro
+We have build our own customized version of video player
+Simple trick is, video player will be behind and all the icons, and other elements will be having controls through JS.
+Example: Play/Pause button is just an icon, but we are adding a click event. So, when it is clicked, we play/pause the video.
+
 # Video Explanation
 > If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
 
