@@ -1,3 +1,13 @@
+# Production
+
+# About the Project
+In this one, we're gonna be incorporating the NASA API to get random astronomy pictures of the day.
+The loading svg which you see on the site is from https://getloaf.io/. They provide cool animation-high performance SVGs.
+This project you will see the NASA API
+
+## NASA API
+https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
+
 # Video Explanation
 > If you want to understand the installation, about the project structure etc. then watch this [Video](https://www.youtube.com/watch?v=r0ezcR_Qx84), else proceed below.
 
